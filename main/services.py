@@ -62,8 +62,7 @@ def agrega_profesor_a_curso(profesor_rut, codigo_curso):
     profesor = obtiene_profesor(profesor_rut)
     curso = obtiene_curso(codigo_curso)
     # 2. Las vinculo
-    curso.profesor = profesor
-    curso.save()
+    curso.profesor.add(profesor) 
 
 def agrega_cursos_a_estudiante(curso_codigo, estudiante_rut):
     # 1. Recuperamos curso y estudiante que queremos vincular

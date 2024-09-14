@@ -10,7 +10,8 @@ class Estudiante(models.Model):
     creacion_registro = models.DateTimeField(auto_now_add=True)
     modificacion_registro = models.DateTimeField(auto_now=True)
     creado_por = models.CharField(max_length=50, null=False)
-    # direccion (viene del related_name)
+    
+# direccion (viene del related_name)
     
 class Direccion(models.Model):
     calle = models.CharField(max_length=50, null=False)
@@ -42,7 +43,7 @@ class Curso(models.Model):
     profesor = models.ManyToManyField(
         Profesor, 
         related_name='cursos', 
-       
+        
     )
     estudiante = models.ManyToManyField(
         Estudiante, 
