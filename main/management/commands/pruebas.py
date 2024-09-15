@@ -3,8 +3,8 @@ from main.services import *
 
 class Command(BaseCommand):
     def handle(self, *args, **kwargs):
-        agrega_profesor_a_curso('02-02', 'SQL01')
-        agrega_profesor_a_curso('02-03', 'JV01')
-        agrega_profesor_a_curso('02-01', 'PY01')
-        agrega_profesor_a_curso('02-04', 'DJ01')
+        agrega_cursos_a_estudiante('SQL01','01-02')
+        agrega_cursos_a_estudiante('JV01','01-03')
+        agrega_cursos_a_estudiante('PY01','01-01')
+        agrega_cursos_a_estudiante('DJ01','01-04')
         print('Acción realizada')
